@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Wix xmlns="http://schemas.microsoft.com/wix/2006/wi" 
+     xmlns:bal="http://schemas.microsoft.com/wix/BalExtension"
+     xmlns:util="http://schemas.microsoft.com/wix/UtilExtension">
+  
+    <Bundle Name="!(loc.BundleName)" Version="1.0.0.0" Compressed="yes" Manufacturer="!(loc.Manufacturer)" UpgradeCode="95c80085-eec8-4e08-b174-366160ca0534">
+        <BootstrapperApplicationRef Id="ManagedBootstrapperApplicationHost">
+            <Payload Name="BootstrapperCore.config" SourceFile="$(var.InstallerUI.TargetDir)InstallerUI.BootstrapperCore.config" />
+            <Payload SourceFile="$(var.InstallerUI.TargetPath)" />
+            <Payload SourceFile="$(var.InstallerUI.TargetDir)Newtonsoft.Json.dll" />
+        </BootstrapperApplicationRef>
+
+		<WixVariable Id="WixMbaPrereqLicenseUrl" Value="" />
+		<WixVariable Id="WixMbaPrereqPackageId" Value="" />
+
+		<Chain>
+            <MsiPackage Id="SetupProject2" 
+                    DisplayName="!(loc.SetupProject2)"
+                    SourceFile="$(var.SetupProject2.TargetPath)" 
+                    Visible="no">
+			    <MsiProperty Name="INSTALLFOLDER" Value="[InstallFolder]" />
+            </MsiPackage>
+	    </Chain>
+	</Bundle>
+</Wix>
