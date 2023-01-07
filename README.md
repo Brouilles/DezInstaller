@@ -26,3 +26,12 @@ Now, remember to switch to Release.
 * Build **Bootstrapper**
 
 Your final exe is located at `GameInstaller/Bootstrapper/bin/Release`.
+
+## Screenshots
+
+You can customize the interface like you want. It is a normal WPF app.   
+
+![Screenshot](https://github.com/Brouilles/DezInstaller/blob/main/screenshots/0.png)   
+![Screenshot](https://github.com/Brouilles/DezInstaller/blob/main/screenshots/1.png)   
+![Screenshot](https://github.com/Brouilles/DezInstaller/blob/main/screenshots/2.png)   
+![Screenshot](https://github.com/Brouilles/DezInstaller/blob/main/screenshots/3.png)   
